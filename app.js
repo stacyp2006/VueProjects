@@ -5,6 +5,11 @@ Vue.createApp({
       enteredValue: '',
     };
   },
+  methods: {
+    addGoal() {
+      this.goals.push(this.enteredValue);
+    },
+  },
 });
 
 // const buttonEl = document.querySelector('button');
