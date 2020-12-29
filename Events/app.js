@@ -3,15 +3,25 @@ const app = Vue.createApp({
     return {
       counter: 10,
       name: '',
+      fullName: '',
     };
   },
-  computed: {
-    fullName() {
-      if (this.name === '') {
-        return '';
+  watch: {
+    name(value) {
+      if (value === '') {
+        this.fullName = '';
+      } else {
+        this.fullName = value + ' ' + 'Potten';
       }
-      return this.name + ' ' + 'Potten';
     },
+  },
+  computed: {
+    // fullName() {
+    //   if (this.name === '') {
+    //     return '';
+    //   }
+    //   return this.name + ' ' + 'Potten';
+    // },
   },
   methods: {
     add(num) {
