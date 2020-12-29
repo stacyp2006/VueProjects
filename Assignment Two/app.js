@@ -1,10 +1,15 @@
 const app = Vue.createApp({
   data() {
-    return {};
+    return {
+      output: '',
+    };
   },
   methods: {
     showAlert() {
       alert('You did it');
+    },
+    setOutput(event) {
+      this.output = event.target.value;
     },
   },
 });
