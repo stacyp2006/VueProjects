@@ -17,6 +17,9 @@ const app = Vue.createApp({
       this.name = event.target.value + ' ' + lastName;
       //^ allows the event to be grabbed w/$event in the html
     },
+    submitForm() {
+      alert('Submitted!');
+    },
   },
 });
 
