@@ -5,6 +5,14 @@ const app = Vue.createApp({
       name: '',
     };
   },
+  computed: {
+    fullName() {
+      if (this.name === '') {
+        return '';
+      }
+      return this.name + ' ' + 'Potten';
+    },
+  },
   methods: {
     add(num) {
       this.counter = this.counter + num;
@@ -20,6 +28,12 @@ const app = Vue.createApp({
     resetInput() {
       this.name = '';
     },
+    // outputFullName() {
+    //   if (this.name === '') {
+    //     return '';
+    //   }
+    //   return this.name + ' ' + 'Potten';
+    // },
   },
 });
 
