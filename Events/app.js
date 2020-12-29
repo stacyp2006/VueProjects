@@ -12,8 +12,10 @@ const app = Vue.createApp({
     decrease(num) {
       this.counter = this.counter - num;
     },
-    setName(event) {
-      this.name = event.target.value;
+    setName(event, lastName) {
+      // this.name = event.target.value; for regular, first name display w/event obj
+      this.name = event.target.value + ' ' + lastName;
+      //^ allows the event to be grabbed w/$event in the html
     },
   },
 });
