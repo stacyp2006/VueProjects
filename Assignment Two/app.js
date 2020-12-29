@@ -2,6 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       output: '',
+      outputTwo: '',
     };
   },
   methods: {
@@ -10,6 +11,9 @@ const app = Vue.createApp({
     },
     setOutput(event) {
       this.output = event.target.value;
+    },
+    setOutputTwo(event) {
+      this.outputTwo = event.target.value;
     },
   },
 });
