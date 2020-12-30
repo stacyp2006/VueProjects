@@ -4,6 +4,14 @@ const app = Vue.createApp({
       counter: 0,
     };
   },
+  watch: {
+    result() {
+      const that = this;
+      setTimeout(function () {
+        that.counter = 0;
+      }, 5000);
+    },
+  },
   computed: {
     result() {
       if (this.counter < 37) {
