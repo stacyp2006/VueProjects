@@ -2,8 +2,18 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      result: '',
     };
+  },
+  computed: {
+    result() {
+      if (this.counter < 37) {
+        return 'Not there yet!';
+      } else if (this.counter === 37) {
+        return this.counter;
+      } else {
+        return 'Too much!';
+      }
+    },
   },
   methods: {
     add(num) {
@@ -17,7 +27,7 @@ const app = Vue.createApp({
     //   } else if (this.counter === 37) {
     //     this.result = 37;
     //   }
-    },
+    //},
   },
 });
 
