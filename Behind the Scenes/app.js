@@ -32,9 +32,19 @@ const app = Vue.createApp({
   updated() {
     console.log('updated()');
   },
+  beforeUnmount() {
+    console.log('beforeUnmount()');
+  },
+  unmounted() {
+    console.log('unmounted()');
+  },
 });
 
 app.mount('#app');
+
+setTimeout(function () {
+  app.unmount();
+}, 3000);
 
 const app2 = Vue.createApp({
   template: `
