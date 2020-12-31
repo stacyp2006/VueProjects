@@ -1,7 +1,6 @@
 const app = Vue.createApp({
   data() {
     return {
-      detailsAreVisible: false,
       friends: [
         {
           id: 'manuel',
@@ -16,6 +15,14 @@ const app = Vue.createApp({
           email: 'julie@localhost.com',
         },
       ],
+    };
+  },
+});
+
+app.component('friend-contact', {
+  data() {
+    return {
+      detailsAreVisible: false,
     };
   },
   methods: {
