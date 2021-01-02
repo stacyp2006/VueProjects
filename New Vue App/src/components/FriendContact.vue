@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h2>{{ name }}</h2>
+    <h2>{{ name }} {{ isFavorite === '1' ? '(Favorite)' : '' }}</h2>
     <button @click="toggleDetails">
       {{ detailsAreVisible ? 'Hide' : 'Show' }} Details
     </button>
@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  props: ['name', 'phoneNumber', 'emailAddress'],
+  props: ['name', 'phoneNumber', 'emailAddress', 'isFavorite'],
   data() {
     return {
       detailsAreVisible: false,
