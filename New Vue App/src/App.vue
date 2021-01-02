@@ -4,8 +4,17 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
+      <friend-contact
+        name="Manuel Lorenz"
+        phone-number="0123 4567 8901"
+        email="manuel@localhost.com"
+      ></friend-contact>
+      <friend-contact
+        name="Julie Jones"
+        phone-number="9876 5432 1098"
+        email="julie@localhost.com"
+      >
+      </friend-contact>
     </ul>
   </section>
 </template>
