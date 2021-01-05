@@ -11,9 +11,9 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(this.$slots.header);
-  },
+  // mounted() {
+  //   console.log(this.$slots.header);
+  // },
 };
 </script>
 
